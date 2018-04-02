@@ -1,1 +1,1 @@
-# ethereum-encrypted-messaging
+# Ethereum Encrypted Messaging
