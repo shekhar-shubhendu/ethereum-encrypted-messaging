@@ -9,7 +9,7 @@ import { AppNavbarComponent } from './components/app-navbar/app-navbar.component
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { AuthenticationService } from './services/authentication.service';
 import { OnlyLoggedInUsersGuard } from './guards/only-logged-in-users.guard';
-import { AlwaysAuthGuard } from './guards/always-auth.guard';
+import { IsLoggedInGuard } from './guards/is-logged-in.guard';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { AlwaysAuthGuard } from './guards/always-auth.guard';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AuthenticationService, OnlyLoggedInUsersGuard, AlwaysAuthGuard],
+  providers: [AuthenticationService, OnlyLoggedInUsersGuard, IsLoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

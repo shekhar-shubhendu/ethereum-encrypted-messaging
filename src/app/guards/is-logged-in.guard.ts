@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable()
-export class AlwaysAuthGuard implements CanActivate {
+export class IsLoggedInGuard implements CanActivate {
   constructor(private authService: AuthenticationService, private router: Router) {}
 
   canActivate(
