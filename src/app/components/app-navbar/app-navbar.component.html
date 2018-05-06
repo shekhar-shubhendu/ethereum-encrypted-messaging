@@ -12,6 +12,7 @@
         <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
       </svg>
     </a>
-    <div class="navbar-brand">Ethereum Encrypted Messaging</div>
+    <a class="py-2">Ethereum Encrypted Messaging</a>
+    <a class="py-2" *ngIf="this.authService.isUserLoggedIn()" href="#" (click)="doLogout()">Logout</a>
   </div>
 </nav>
