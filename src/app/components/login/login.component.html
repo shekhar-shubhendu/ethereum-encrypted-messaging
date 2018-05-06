@@ -1,15 +1,17 @@
-  <div class="container">
-    <section class="main">
-      <form name="login-form" class="login-form clearfix">
-          <p>
-              <input [(ngModel)]="loginForm.filename" type="text" id="login" name="filename" (click)="openFileSelect($event)" placeholder="Ethereum Keystore">
-              <input [(ngModel)]="loginForm.password" type="password" name="password" id="password" placeholder="Password">
-              <input type="file" name="keyFile" id="keyFile" (change)="onFileSelect($event)" style="display:none" >
-          </p>
-          <button type="button" (click)="doLogin($event)" name="submit">
-            <i class="fa fa-arrow-right"></i>
-            <span>Sign in</span>
-          </button>     
-      </form>​​​​
-    </section>
-    </div>
+<div class="container">
+  <section class="main">
+    <form name="login-form" class="login-form clearfix">
+      <p>
+        <span (click)="openFileSelect($event)">
+          <input [(ngModel)]="loginForm.filename" type="text" id="login" name="filename" placeholder="Ethereum Keystore" disabled>
+        </span>
+        <input [(ngModel)]="loginForm.password" type="password" name="password" id="password" placeholder="Password">
+        <input type="file" name="keyFile" id="keyFile" (change)="onFileSelect($event)" style="display:none">
+      </p>
+      <button type="button" (click)="doLogin($event)" name="submit">
+        <i class="fa fa-arrow-right"></i>
+        <span>Sign in</span>
+      </button>
+    </form>​​​​
+  </section>
+</div>

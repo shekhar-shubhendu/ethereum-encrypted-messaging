@@ -38,15 +38,20 @@ export class LoginComponent implements OnInit {
   }
 
   public doLogin = (event) => {
-    this.authService.processLogin(this.loginForm).subscribe(data => {
-      if (!data) {
-        alert('Password or File Format incorrect.');
-      }
-    });
+    if (this.loginForm.filename && this.loginForm.fileContent && this.loginForm.password){
+      this.authService.processLogin(this.loginForm).subscribe(data => {
+        if (!data) {
+          alert('Password or Keystore Incorrect.');
+        }
+      });
+    } else {
+      alert('Please fill all the fields.');
+    }
     this.loginForm = {
       filename: '',
       password: ''
     };
+    (<HTMLInputElement>document.getElementById('keyFile')).value = '';
   }
 
 }
