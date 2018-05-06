@@ -5,13 +5,13 @@
     font-family: 'Handlee', cursive;
   }
   .site-header a {
-    color: #999;
+    color: #fff;
     transition: ease-in-out color .15s;
   }
   .site-header a:hover {
-    color: #fff;
+    color: #999;
     text-decoration: none;
   }
   .site-header .navbar-brand {
-    color: #999;
+    color: #fff;
   }

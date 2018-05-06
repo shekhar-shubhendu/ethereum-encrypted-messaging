@@ -17,7 +17,7 @@
 }
 
 body {
-  background: #eedfcc url(../../../assets/images/blurred.jpg) no-repeat center top;
+  background: #eedfcc url(../../../assets/images/bg3.jpg) no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -30,7 +30,7 @@ body {
   position: relative;
   /* Styles */
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1); */
 }
 
 .login-form p {
@@ -85,8 +85,6 @@ body {
   background: rgba(255, 255, 255, 0.4);
   outline: none;
 }
-
-/* Placeholder style (from http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css) */
 
 .login-form input::-webkit-input-placeholder {
   color: #fff;
