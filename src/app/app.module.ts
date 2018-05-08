@@ -10,6 +10,7 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 import { AuthenticationService } from './services/authentication.service';
 import { OnlyLoggedInUsersGuard } from './guards/only-logged-in-users.guard';
 import { IsLoggedInGuard } from './guards/is-logged-in.guard';
+import { MessagingService } from './services/messaging.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { IsLoggedInGuard } from './guards/is-logged-in.guard';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AuthenticationService, OnlyLoggedInUsersGuard, IsLoggedInGuard],
+  providers: [AuthenticationService, OnlyLoggedInUsersGuard, IsLoggedInGuard, MessagingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
