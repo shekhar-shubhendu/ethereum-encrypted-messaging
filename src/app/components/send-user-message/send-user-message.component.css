@@ -1,0 +1,14 @@
+.input-full-width {
+    width: 100%;
+}
+
+.messageForm {
+    min-width: 550px;
+    max-width: 600px;
+    width: 100%;
+}
+
+mat-card {
+    width: 650px;
+    height: 350px;
+}

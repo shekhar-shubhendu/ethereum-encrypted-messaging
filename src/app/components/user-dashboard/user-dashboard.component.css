@@ -1,0 +1,31 @@
+@media (min-width: 768px){
+    #left {
+      position: absolute;
+      top: 0px;
+      bottom: 0;
+      left: 0;
+      width: 65%;
+      overflow-y: scroll; 
+    }
+    
+    #right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      overflow-y: scroll;
+      width: 40%;
+    }
+  }
+  
+  #left {
+    background-color: #fc6e51;
+    background-image: url("../../../assets/images/3px-tile.png");
+    height:100%;
+  }
+  
+  #right {
+    height:100%;
+    background-color: #4FC1E9;
+    background-image: url("../../../assets/images/3px-tile.png");
+  }

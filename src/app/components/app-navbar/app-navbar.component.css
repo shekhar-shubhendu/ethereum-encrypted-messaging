@@ -1,5 +1,5 @@
 .site-header {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .75);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     font-family: 'Handlee', cursive;

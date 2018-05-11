@@ -1,0 +1,20 @@
+<h3>Send Message</h3>
+<mat-card>
+  <mat-card-content class="center">
+    <form class="messageForm">
+      <mat-form-field class="input-full-width">
+        <mat-label>Receiver ETH Address</mat-label>
+        <input matInput placeholder="e.g. 0x7ca936344d234034cf6936472d6bedbe8ae6667f">
+      </mat-form-field>
+      <mat-form-field class="input-full-width">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows = '10' placeholder="e.g. Hello there....."></textarea>
+      </mat-form-field>
+      <mat-card-actions class="float-right">
+        <button mat-fab color="primary">
+          <mat-icon fontSet="fa" fontIcon="fa-paper-plane"></mat-icon>
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -6,7 +6,7 @@ declare var Wallet: any;
 
 @Injectable()
 export class AuthenticationService {
-  private userLoggedIn = false;
+  private userLoggedIn = true;
   private wallet: any = null;
   constructor(private router: Router) { }
 
