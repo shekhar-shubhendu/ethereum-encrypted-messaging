@@ -5,7 +5,6 @@
       bottom: 0;
       left: 0;
       width: 65%;
-      overflow-y: scroll; 
     }
     
     #right {
@@ -26,6 +25,5 @@
   
   #right {
     height:100%;
-    background-color: #4FC1E9;
     background-image: url("../../../assets/images/funky-lines.png");
   }
