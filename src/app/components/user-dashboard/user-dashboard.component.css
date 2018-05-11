@@ -19,7 +19,7 @@
   }
   
   #left {
-    background-color: #fc6e51;
+    background-color: lightgray;
     background-image: url("../../../assets/images/3px-tile.png");
     height:100%;
   }
@@ -27,5 +27,5 @@
   #right {
     height:100%;
     background-color: #4FC1E9;
-    background-image: url("../../../assets/images/3px-tile.png");
+    background-image: url("../../../assets/images/funky-lines.png");
   }
