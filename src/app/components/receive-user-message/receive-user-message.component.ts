@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceiveUserMessageComponent implements OnInit {
 
+  data = new Array(10);
   constructor() { }
 
   ngOnInit() {

@@ -1,3 +1,19 @@
 <mat-card class="mb-3">
-    <mat-card-title><h3>Received Messages</h3></mat-card-title>
+  <mat-card-title>
+    <h3>Received Messages</h3>
+  </mat-card-title>
 </mat-card>
+<div *ngFor="let i of data">
+  <mat-card class="receive-msg mb-3">
+    <mat-card-title class="d-flex flex-row">
+      <mat-label>From: </mat-label>
+      <span>0x7ca936344d234034cf6936472d6bedbe8ae6667f</span>
+    </mat-card-title>
+    <hr>
+    <mat-card-content class="center">
+      <div class="d-flex flex-row">
+        <span>Hello World</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
