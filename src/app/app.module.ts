@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
@@ -24,6 +25,7 @@ import { IsLoggedInGuard } from './guards/is-logged-in.guard';
 import { MessagingService } from './services/messaging.service';
 import { SendUserMessageComponent } from './components/send-user-message/send-user-message.component';
 import { ReceiveUserMessageComponent } from './components/receive-user-message/receive-user-message.component';
+import { EthstatsService } from './services/ethstats.service';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { ReceiveUserMessageComponent } from './components/receive-user-message/r
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatCardModule,
     MatButtonModule,
@@ -49,7 +52,13 @@ import { ReceiveUserMessageComponent } from './components/receive-user-message/r
     MatCheckboxModule,
     MatIconModule
   ],
-  providers: [AuthenticationService, OnlyLoggedInUsersGuard, IsLoggedInGuard, MessagingService],
+  providers: [
+    AuthenticationService,
+    OnlyLoggedInUsersGuard,
+    IsLoggedInGuard,
+    MessagingService,
+    EthstatsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
