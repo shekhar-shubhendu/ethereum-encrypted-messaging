@@ -1,4 +1,4 @@
 {
-  "APIKey": "// set api key here",
-  "Network": "// set network here"
+  "key": "// set api key here",
+  "network": "// set network here"
 }
