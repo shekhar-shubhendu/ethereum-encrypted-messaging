@@ -23,10 +23,9 @@ import { AuthenticationService } from './services/authentication.service';
 import { OnlyLoggedInUsersGuard } from './guards/only-logged-in-users.guard';
 import { IsLoggedInGuard } from './guards/is-logged-in.guard';
 import { MessagingService } from './services/messaging.service';
+import { CipherService } from './services/cipher.service';
 import { SendUserMessageComponent } from './components/send-user-message/send-user-message.component';
 import { ReceiveUserMessageComponent } from './components/receive-user-message/receive-user-message.component';
-import { EthstatsService } from './services/ethstats.service';
-
 
 @NgModule({
   declarations: [
@@ -57,7 +56,7 @@ import { EthstatsService } from './services/ethstats.service';
     OnlyLoggedInUsersGuard,
     IsLoggedInGuard,
     MessagingService,
-    EthstatsService
+    CipherService
   ],
   bootstrap: [AppComponent]
 })
