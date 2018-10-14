@@ -3,9 +3,10 @@ pragma solidity ^0.4.19;
 contract MessageRegistry {
 
     address public _owner;
-    uint private idNounce = 1;
-    event NewMessageCreated(bytes32 msgId, address sender);
+    event NewMessageCreated(bytes32 msgId, string message, address receiver, address sender);
+    event KeyRegistered(string key, address registrant);
     mapping(bytes32 => string) private messageRegistry;
+    mapping(address => string) private publicKeyRegistry;
     
     constructor() public {
         _owner = msg.sender;
@@ -16,11 +17,15 @@ contract MessageRegistry {
         _;
     }
 
-    function createMessage(string message) public returns(bytes32 messageId) {
-        messageId = keccak256(message, idNounce);
+    function createMessage(string message, address receiver) public {
+        bytes32 messageId = keccak256(abi.encodePacked(message));
         messageRegistry[messageId] = message;
-        idNounce++;
-        emit NewMessageCreated(messageId, msg.sender);
+        emit NewMessageCreated(messageId, message, receiver, msg.sender);
+    }
+
+    function registerKey(string key) public {
+        publicKeyRegistry[msg.sender] = key;
+        emit KeyRegistered(key, msg.sender);
     }
 
     function getMessage(string id) public view returns(string) {
@@ -32,7 +37,7 @@ contract MessageRegistry {
         selfdestruct(_owner);
     }
 
-    function stringToBytes32(string memory source) pure private returns (bytes32 result) {
+    function stringToBytes32(string memory source) internal pure returns (bytes32 result) {
         bytes memory tempEmptyStringTest = bytes(source);
         if (tempEmptyStringTest.length == 0) {
             return 0x0;
