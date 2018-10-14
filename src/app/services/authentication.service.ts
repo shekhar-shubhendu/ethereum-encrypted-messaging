@@ -6,7 +6,7 @@ declare var Wallet: any;
 
 @Injectable()
 export class AuthenticationService {
-  private userLoggedIn = true;
+  private userLoggedIn = false;
   private wallet: any = null;
   constructor(private router: Router) { }
 
@@ -27,6 +27,13 @@ export class AuthenticationService {
     } catch (error) {
       return new Observable(observer => { observer.next(false); } );
     }
+  }
+
+  public getWalletDetails = () => {
+    return {
+      'address': this.wallet.getAddressString(),
+      'privateKey': this.wallet.getPrivateKeyString()
+    };
   }
 
   public invalidate = () => {
