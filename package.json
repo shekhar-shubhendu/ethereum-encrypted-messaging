@@ -13,7 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
-    "@angular/cdk": "^5.2.4",
+    "@angular/cdk": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
@@ -25,11 +25,12 @@
     "@angular/router": "^5.2.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
-    "etherscan-api": "^8.0.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "rxjs": "^5.5.6",
+    "tweetnacl": "^1.0.0",
+    "tweetnacl-util": "^0.15.0",
     "web3": "^1.0.0-beta.34",
     "zone.js": "^0.8.19"
   },
@@ -61,7 +62,6 @@
     "truffle-contract": "^3.0.5",
     "ts-node": "^4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3",
-    "web3": "^1.0.0-beta.34"
+    "typescript": "~2.5.3"
   }
 }
